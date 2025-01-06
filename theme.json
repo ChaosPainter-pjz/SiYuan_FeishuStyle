@@ -1,16 +1,16 @@
 {
-  "name": "theme-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/theme-sample",
-  "version": "0.0.3",
-  "minAppVersion": "2.8.8",
+  "name": "SiYuan_FeishuStyle",
+  "author": "ChaosPainter-pjz",
+  "url": "https://github.com/ChaosPainter-pjz/SiYuan_FeishuStyle",
+  "version": "0.0.1",
+  "minAppVersion": "3.0.0",
   "displayName": {
-    "default": "Theme Sample",
-    "zh_CN": "主题示例"
+    "default": "FeiShuStyle",
+    "zh_CN": "飞书风格主题"
   },
   "description": {
-    "default": "This is a theme sample",
-    "zh_CN": "这是一个主题示例"
+    "default": "Manually imitated the theme of the FeiShu document style, but I am not a front-end program, so everyone use with caution",
+    "zh_CN": "手动模仿飞书文档风格的主题，但本人不是前端程序，所以大家谨慎使用"
   },
   "readme": {
     "default": "README.md",
@@ -20,14 +20,12 @@
     "openCollective": "",
     "patreon": "",
     "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
+    "custom": []
   },
   "modes": [
-    "light"
+    "dark"
   ],
   "keywords": [
-    "sample", "示例"
+    "feishu", "飞书"
   ]
 }
