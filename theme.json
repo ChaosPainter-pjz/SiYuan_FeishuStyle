@@ -3,10 +3,10 @@
   "author": "ChaosPainter-pjz",
   "url": "https://github.com/ChaosPainter-pjz/SiYuan_FeishuStyle",
   "version": "0.0.1",
-  "minAppVersion": "3.0.0",
+  "minAppVersion": "2.0.0",
   "displayName": {
     "default": "FeiShuStyle",
-    "zh_CN": "飞书风格主题"
+    "zh_CN": "飞书风格"
   },
   "description": {
     "default": "Manually imitated the theme of the FeiShu document style, but I am not a front-end program, so everyone use with caution",
