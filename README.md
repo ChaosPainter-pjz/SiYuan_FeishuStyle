@@ -1,4 +1,4 @@
-[中文](https://github.com/siyuan-note/theme-sample/blob/main/README_zh_CN.md)
+[中文](https://github.com/ChaosPainter-pjz/SiYuan_FeishuStyle/blob/main/README_zh_CN.md)
 
 This is a dark theme manually imitated in the style of Feishu documents.
 

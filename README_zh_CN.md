@@ -1,4 +1,4 @@
-[English](https://github.com/siyuan-note/theme-sample/blob/main/README.md)
+[English](https://github.com/ChaosPainter-pjz/SiYuan_FeishuStyle/blob/main/README.md)
 
 这是一个手动模仿飞书文档风格而制作出来的深色主题。
 
