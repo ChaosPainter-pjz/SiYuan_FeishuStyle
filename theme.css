@@ -1,7 +1,7 @@
 :root {
     /* 主色 */
-    --b3-theme-primary:  #f0f0f0;
-    --b3-theme-primary-light: rgba(53, 115, 240, .72);
+    --b3-theme-primary: #4a7fff;
+    --b3-theme-primary-light: rgba(45, 95, 197, 0.65);
     --b3-theme-primary-lighter: rgba(53, 115, 240, .48);
     --b3-theme-primary-lightest: rgba(53, 115, 240, .24);
     --b3-theme-secondary: #f3a92f;
@@ -39,7 +39,7 @@
 
     /* 线条 */
     --b3-border-color: #363636;
-    --b3-border-radius: 6px;
+    --b3-border-radius: 3px;
     --b3-border-radius-b: 12px;
 
     /* 滚动条 */
@@ -120,8 +120,8 @@
     --b3-switch-background: #444746;
     --b3-switch-border: var(--b3-theme-on-surface-light);
     --b3-switch-hover: rgba(253, 252, 251, .10);
-    --b3-switch-checked: var(--b3-theme-primary);
-    --b3-switch-checked-background: #a8c7fa;
+    --b3-switch-checked: var(--b3-theme-on-background);
+    --b3-switch-checked-background: #4b86fb;
     --b3-switch-checked-hover: var(--b3-theme-primary);
     --b3-switch-checked-hover2: rgba(253, 252, 251, .10);
 
@@ -213,24 +213,26 @@
 .b3-text-field::-webkit-calendar-picker-indicator {
     filter: invert(1)
 }
-/* 行内代码描边*/
-.fn__code, .b3-typography code:not(.hljs), .b3-typography span[data-type~=code], .protyle-wysiwyg code:not(.hljs), .protyle-wysiwyg span[data-type~=code] {
-/ / background: white;
-/ / color: #05c091;
-    border: rgb(95, 95, 95) solid 1px;
 
+/* 行内代码描边*/
+.fn__code, .b3-typography code:not(.hljs),
+.b3-typography span[data-type~=code],
+.protyle-wysiwyg code:not(.hljs),
+.protyle-wysiwyg span[data-type~=code] {
+    border: rgb(95, 95, 95) solid 1px;
+    padding: 1px 4px 1px;
+    margin: 0 6px 0;
+    /*暂时缓解代码换行样式问题*/
+    white-space: pre;
 }
 
-/*.layout-tab-bar .item__text {*/
-/*    font-size: 15px*/
-/*}*/
 /*字距+1*/
 .protyle-wysiwyg [data-node-id] [spellcheck] {
     letter-spacing: 1px
 }
 
 .code-block {
-/ / border: rgb(95, 95, 95) solid 1 px;
+    /*border: rgb(95, 95, 95) solid 1px;*/
     transition: none !important;
     font-size: 14px;
     font-weight: 400;
@@ -240,8 +242,9 @@
 .b3-typography table thead th, .b3-typography table thead td, .protyle-wysiwyg table thead th, .protyle-wysiwyg table thead td {
     font-weight: 600;
     background: var(--bg-body-overlay);
-/ / border-collapse: separate;
+    /*border-collapse: separate;*/
 }
+
 video:only-of-type {
     display: inline-block;
     position: relative;
@@ -266,58 +269,109 @@ iframe:only-of-type {
     margin-left: 8px;
     align-self: center;
 }
+
 .b3-typography div.hljs, .protyle-wysiwyg div.hljs {
     padding: 24px 24px 18px 24px;
     flex: 1;
     display: flex;
     position: relative;
 }
+
 div[data-type="NodeCodeBlock"] {
     border: 1px solid var(--line-border-card);
 }
 
-ellipse{
+ellipse {
     stroke: var(--b3-theme-on-background);
 
 }
-path[stroke="#000000"]{
+
+path[stroke="#000000"] {
     stroke: var(--b3-theme-on-background);
     fill-opacity: 0;
     stroke-width: 1px;
 }
-g:only-of-type  polygon[stroke="#000000"]{
-    color: rgba(0,0,0,0);
+
+g:only-of-type polygon[stroke="#000000"] {
+    color: rgba(0, 0, 0, 0);
     stroke: var(--b3-theme-on-background);
 }
-g:only-of-type  polygon[stroke="transparent"]{
+
+g:only-of-type polygon[stroke="transparent"] {
     fill-opacity: 0;
-    //stroke: var(--b3-theme-on-background);
+/ / stroke: var(--b3-theme-on-background);
 }
-text{
+
+text {
     fill: var(--b3-theme-on-background);
 }
-rect{
+
+rect {
     fill-opacity: 0;
     stroke: var(--b3-theme-on-background);
     stroke-width: 1px;
 }
-.commit-label-bkg{
+
+.commit-label-bkg {
     stroke: none;
 }
-.branchLabelBkg.label0{
+
+.branchLabelBkg.label0 {
     stroke: none;
 }
-.branchLabelBkg.label1{
+
+.branchLabelBkg.label1 {
     stroke: none;
 }
+
 .b3-typography [data-subtype=flowchart] [contenteditable=false] svg, .protyle-wysiwyg [data-subtype=flowchart] [contenteditable=false] svg {
     background: transparent;
 }
+
 .layout-tab-bar .item {
     line-height: 24px;
 }
-.b3-typography .h2, .b3-typography h2, .protyle-wysiwyg .h2, .protyle-wysiwyg h2 [data-type="NodeHeading"]{
+
+.b3-typography .h2, .b3-typography h2, .protyle-wysiwyg .h2, .protyle-wysiwyg h2 [data-type="NodeHeading"] {
     padding: .3em 4px;
     font-size: 1.55em;
-    //border: 1px solid var(--line-border-card);
+    /*border: 1px solid var(--line-border-card);*/
+}
+
+.b3-switch {
+    height: 22px;
+    width: 40px;
+    /*border-radius: 10px;*/
+
+}
+
+.b3-switch:checked::after {
+    /*background-color: var(--b3-switch-checked);*/
+    height: 18px;
+    width: 18px;
+    left: 28px;
+}
+
+.b3-switch:checked::before {
+    /*background-color: var(--b3-switch-checked);*/
+    height: 18px;
+    width: 18px;
+    left: 28px;
+}
+
+.b3-switch::after {
+    width: 16px;
+    height: 16px;
+    left: 10px;
+}
+/*图片加边框*/
+img:not(.emoji)  {
+    border: 1px solid var(--line-border-card);
+    /*border-*/
+    border-radius: 5px;
+}
+/* 代码块*/
+.b3-typography .code-block:not(pre), .protyle-wysiwyg .code-block:not(pre) {
+
+    border-radius: 8px;
 }

@@ -1,95 +1,17 @@
 [English](https://github.com/siyuan-note/theme-sample/blob/main/README.md)
 
-# 思源笔记主题示例
+这是一个手动模仿飞书文档风格而制作出来的深色主题。
 
-## 开始
+飞书风格是一个办公味比较浓重的风格，相较于原版 `midnight`来说没有那么活泼。更注重沉稳、清晰。当然，相较于`Notion`和`VS Code`来说，咱们飞书的风格还是很年轻的。
 
-* 通过 <kbd>Use this template</kbd> 按钮将该库文件复制到你自己的库中，请注意库名必须和主题名称一致，默认分支必须为 `main`
-* 将你的库克隆到本地开发文件夹中，为了方便可以直接将开发文件夹放置在 `{workspace}/conf/appearance/themes/` 下
+以下是互联网搜罗的一些文书风格的夸夸：
+* 飞书以其简洁大气的设计风格，清新的色彩搭配以及流畅的界面布局，给人带来视觉上的享受。从图标到整体框架，每一处细节都彰显着精致与用心。
 
-## 开发
+* 企业选择飞书，往往“始于颜值，终于才华”。文和友CEO冯彬非常坦诚地表示，他们选择飞书的第一个理由很简单：好看，颜值是第一生产力。
 
-* theme.json
-* icon.png (160*160)
-* preview.png (1024*768)
-* README*.md
-* theme.css
-* theme.js
+细心的朋友应该看出来了，LOGO都是我手动模仿的~
 
-## theme.json
-
-```json
-{
-  "name": "theme-sample",
-  "author": "Vanessa",
-  "url": "https://github.com/siyuan-note/theme-sample",
-  "version": "0.0.3",
-  "minAppVersion": "2.8.8",
-  "displayName": {
-    "default": "Theme Sample",
-    "zh_CN": "主题示例"
-  },
-  "description": {
-    "default": "This is a theme sample",
-    "zh_CN": "这是一个主题示例"
-  },
-  "readme": {
-    "default": "README.md",
-    "zh_CN": "README_zh_CN.md"
-  },
-  "funding": {
-    "openCollective": "",
-    "patreon": "",
-    "github": "",
-    "custom": [
-      "https://ld246.com/sponsor"
-    ]
-  },
-  "modes": [
-    "light"
-  ],
-  "keywords": [
-    "sample", "示例"
-  ]
-}
-```
-
-* `name`：主题名称，必须和库名一致，且全局唯一（集市中不能有重名主题）
-* `author`：主题作者名
-* `url`：主题仓库地址
-* `version`：主题版本号，建议遵循 [semver](https://semver.org/lang/zh-CN/) 规范
-* `minAppVersion`：主题支持的最低版本号，建议遵循 [semver](https://semver.org/lang/zh-CN/) 规范
-* `minAppVersion`：主题支持的最低思源笔记版本号
-* `displayName`：模板显示名称，主要用于模板集市列表中显示，支持多语言
-    * `default`：默认语言，必须存在
-    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
-* `description`：主题描述，主要用于主题集市列表中显示，支持多语言
-    * `default`：默认语言，必须存在
-    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
-* `readme`：自述文件名，主要用于主题集市详情页中显示，支持多语言
-    * `default`：默认语言，必须存在
-    * `zh_CN`、`en_US` 等其他语言：可选，建议至少提供中文和英文
-* `funding`：主题赞助信息
-    * `openCollective`：Open Collective 名称
-    * `patreon`：Patreon 名称
-    * `github`：GitHub 登录名
-    * `custom`：自定义赞助链接列表
-* `modes`：主题支持的模式列表，可选值为 `light` 和 `dark`
-* `keywords`：搜索关键字列表，用于集市搜索功能
-
-## 打包
-
-无论使用何种方式编译打包，我们最终需要生成一个 package.zip，它至少包含如下文件：
-
-* icon.png
-* preview.png
-* README*.md
-* theme.css
-* theme.json
-
-## 上架集市
-
-* 生成 package.zip
+生成 package.zip
 * 在 GitHub 上创建一个新的发布，使用主题版本号作为 “Tag
   version”，示例 https://github.com/siyuan-note/theme-sample/releases
 * 上传 package.zip 作为二进制附件
