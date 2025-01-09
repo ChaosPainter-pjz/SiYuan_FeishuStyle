@@ -2,15 +2,16 @@
   "name": "siyuan_feishustyle",
   "author": "ChaosPainter-pjz",
   "url": "https://github.com/ChaosPainter-pjz/SiYuan_FeishuStyle",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "minAppVersion": "2.0.0",
   "displayName": {
     "default": "FeiShuStyle",
     "zh_CN": "飞书风格"
   },
   "description": {
-    "default": "Manually imitated the theme of the FeiShu document style, but I am not a front-end program, so everyone use with caution",
-    "zh_CN": "手动模仿飞书文档风格的主题，但本人不是前端程序，所以大家谨慎使用"
+    "default": "飞书文档风格的主题。简洁明快不失沉稳，高效办公氛围拉满，视觉舒适又尽显现代美学。",
+    "zh_CN": "飞书文档风格的主题。简洁明快不失沉稳，高效办公氛围拉满，视觉舒适又尽显现代美学。",
+    "en_US":"The color scheme of Feishu's UI is truly outstanding. It's simple, lively yet remains calm and steady, creating a highly efficient office atmosphere and providing a visually comfortable experience that fully showcases modern aesthetics. "
   },
   "readme": {
     "default": "README.md",

@@ -9,8 +9,8 @@
     --b3-theme-background-light: rgba(255, 255, 255, .075);
     --b3-theme-surface: #262626;
     --b3-theme-surface-light: rgba(41, 42, 45, .86);
-    --b3-theme-surface-lighter: rgba(230, 230, 230, .06);
-    --b3-theme-error: #d23f31;
+    --b3-theme-surface-lighter: #5f5f5f;
+    --b3-theme-error: #fb5445;
     --b3-theme-success: #65b84d;
 
     /* 文字颜色 */
@@ -20,7 +20,7 @@
     --b3-theme-on-surface: #a6a6a6;
     --b3-theme-on-surface-light: #bababa;
     --b3-theme-on-error: #ffffff;
-
+    --b3-theme-on-list: rgb(76, 136, 255);
     /* 字体 */
     --b3-font-size: 14px;
 
@@ -33,7 +33,7 @@
 
     /* 线条 */
     --b3-border-color: #363636;
-    --b3-border-radius: 3px;
+    --b3-border-radius: 5px;
     --b3-border-radius-b: 12px;
 
     /* 滚动条 */
@@ -339,14 +339,59 @@ rect {
     height: 16px;
     left: 10px;
 }
+
 /*图片加边框*/
-img:not(.emoji)  {
+img:not(.emoji) {
     border: 1px solid var(--line-border-card);
     /*border-*/
     border-radius: 5px;
 }
+
 /* 代码块*/
 .b3-typography .code-block:not(pre), .protyle-wysiwyg .code-block:not(pre) {
-
     border-radius: 8px;
+}
+
+/* 列表颜色*/
+.protyle-wysiwyg [data-node-id] .li > .protyle-action {
+    color: var(--b3-theme-on-list);
+}
+
+/* 选择已完成的任务项中的 svg 元素 */
+.protyle-wysiwyg [data-node-id] .protyle-task--done .protyle-action.protyle-action--task svg use {
+    fill: var(--b3-theme-primary-light);
+}
+
+/* 选择未完成的任务项中的 svg 元素 */
+.protyle-wysiwyg [data-node-id] .li:not(.protyle-task--done) .protyle-action.protyle-action--task svg use {
+    fill: var(--b3-theme-primary);
+}
+
+/*引用块 左侧白条*/
+.b3-typography blockquote::before, .b3-typography .bq::before, .protyle-wysiwyg blockquote::before, .protyle-wysiwyg .bq::before {
+    content: "";
+    background-color: var(--b3-theme-surface-lighter);
+    width: 2px;
+    border-radius: var(--b3-border-radius);
+    position: absolute;
+    left: 2px;
+    top: 6px;
+    bottom: 6px;
+}
+
+/*浮动工具栏item*/
+.protyle-toolbar__item {
+    height: 24px;
+    border-radius: 4px;
+    margin: 0 4px 0;
+    color: var(--b3-theme-on-background);
+}
+/*浮动工具栏i*/
+.protyle-toolbar {
+    padding: 8px;
+    border: 1px solid var(--line-border-card);
+    background-color: rgb(41, 41, 41);
+}
+.protyle-toolbar__item:last-child , .protyle-toolbar__item:first-child{
+    border-radius: 4px;
 }
