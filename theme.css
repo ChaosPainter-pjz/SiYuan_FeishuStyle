@@ -386,12 +386,35 @@ img:not(.emoji) {
     margin: 0 4px 0;
     color: var(--b3-theme-on-background);
 }
+
 /*浮动工具栏i*/
 .protyle-toolbar {
     padding: 8px;
     border: 1px solid var(--line-border-card);
     background-color: rgb(41, 41, 41);
 }
-.protyle-toolbar__item:last-child , .protyle-toolbar__item:first-child{
+
+.protyle-toolbar__item:last-child, .protyle-toolbar__item:first-child {
     border-radius: 4px;
+}
+
+/* 有序列表序号大小*/
+[data-node-id].list[data-subtype="o"] > .li:has(>.h1) > .protyle-action {
+    font-size: 1.75em;
+}
+[data-node-id].list[data-subtype="o"] > .li:has(>.h2) > .protyle-action {
+    font-size: 1.55em;
+}
+[data-node-id].list[data-subtype="o"] > .li:has(>.h3) > .protyle-action {
+    font-size: 1.38em;
+}
+[data-node-id].list[data-subtype="o"] > .li:has(>.h4) > .protyle-action {
+    font-size: 1.25em;
+}
+[data-node-id].list[data-subtype="o"] > .li:has(>.h5) > .protyle-action {
+    font-size: 1.13em;
+}
+/* 不显示列表竖线*/
+.protyle-wysiwyg [data-node-id].li::before {
+    border-left: 0;
 }
