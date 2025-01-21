@@ -33,7 +33,8 @@
 
     /* 线条 */
     --b3-border-color: #363636;
-    --b3-border-radius: 5px;
+    --b3-border-radius-code: 5px;
+    --b3-border-radius: 7px;
     --b3-border-radius-b: 12px;
 
     /* 滚动条 */
@@ -83,10 +84,11 @@
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
     --b3-font-background1: var(--b3-card-error-background);
+    --b3-font-background1-light: #e36b5a;
     --b3-font-background2: var(--b3-card-warning-background);
     --b3-font-background3: var(--b3-card-info-background);
     --b3-font-background4: var(--b3-card-success-background);
-    --b3-font-background5: #3b4d5d;
+    --b3-font-background5: rgb(76, 106, 128);
     --b3-font-background6: #0c3d88;
     --b3-font-background7: #593905;
     --b3-font-background8: #541812;
@@ -195,10 +197,12 @@
 .protyle-wysiwyg code:not(.hljs),
 .protyle-wysiwyg span[data-type~=code] {
     border: rgb(95, 95, 95) solid 1px;
+    border-radius: var(--b3-border-radius-code);
     padding: 1px 4px 1px;
     margin: 0 6px 0;
     /*暂时缓解代码换行样式问题*/
     white-space: pre;
+
 }
 
 /*字距+1*/
@@ -251,9 +255,18 @@ iframe:only-of-type {
     display: flex;
     position: relative;
 }
-
-div[data-type="NodeCodeBlock"] {
+/*本来想在内圈加框的，但是缩小页面宽度后，图形会出现一个只有一点点能动的滑条，效果不好*/
+/* 图形加边框*/
+/*svg[role="graphics-document document"][aria-roledescription="sequence"],*/
+/*.flowchart[aria-roledescription="flowchart-v2"],*/
+/*.classDiagram,*/
+.render-node[data-node-id][data-type="NodeCodeBlock"]:not([data-subtype="plantuml"])
+/*.b3-typography [data-subtype=graphviz] [contenteditable=false] svg,*/
+/*.protyle-wysiwyg [data-subtype=graphviz] [contenteditable=false] svg*/
+{
     border: 1px solid var(--line-border-card);
+    border-radius: var(--b3-border-radius);
+    padding: 4px;
 }
 
 ellipse {
@@ -301,6 +314,9 @@ rect {
 
 .b3-typography [data-subtype=flowchart] [contenteditable=false] svg, .protyle-wysiwyg [data-subtype=flowchart] [contenteditable=false] svg {
     background: transparent;
+    /*border: 1px solid var(--line-border-card);*/
+    /*border-radius: var(--b3-border-radius);*/
+    /*padding: 8px;*/
 }
 
 .layout-tab-bar .item {
@@ -341,15 +357,10 @@ rect {
 }
 
 /*图片加边框*/
-img:not(.emoji) {
+.b3-typography .img>span:nth-child(2), .protyle-wysiwyg .img>span:nth-child(2):not(.emoji){
     border: 1px solid var(--line-border-card);
     /*border-*/
     border-radius: 5px;
-}
-
-/* 代码块*/
-.b3-typography .code-block:not(pre), .protyle-wysiwyg .code-block:not(pre) {
-    border-radius: 8px;
 }
 
 /* 列表颜色*/
@@ -393,7 +404,7 @@ img:not(.emoji) {
     border: 1px solid var(--line-border-card);
     background-color: rgb(41, 41, 41);
 }
-
+/* 去除浮动框左右圆角的特殊处理？？*/
 .protyle-toolbar__item:last-child, .protyle-toolbar__item:first-child {
     border-radius: 4px;
 }
@@ -417,4 +428,21 @@ img:not(.emoji) {
 /* 不显示列表竖线*/
 .protyle-wysiwyg [data-node-id].li::before {
     border-left: 0;
+}
+/* 用户手动添加背景色时附送描边和边距*/
+.protyle-wysiwyg .p[data-node-id][style*="background-color:"]{
+    padding: 12px 12px 12px 18px;
+    border: 1px solid rgba(255, 255, 255,40%);
+}
+/* 链接增加左右空隙*/
+.protyle-wysiwyg [data-node-id] span[data-type=a]{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+/* 表格内字变小*/
+.protyle-wysiwyg table thead th,
+.protyle-wysiwyg table tbody td {
+    font-size: 87.5%;
+    padding: 8px 8px;
 }
