@@ -342,9 +342,11 @@ rect {
     width: 18px;
     left: 28px;
 }
-
+/* 滑动勾选框*/
+label:hover .b3-switch:checked:not(:disabled)::before,
+.b3-switch:checked:hover:not(:disabled)::before,
 .b3-switch:checked::before {
-    /*background-color: var(--b3-switch-checked);*/
+    background-color: var(--b3-switch-checked);
     height: 18px;
     width: 18px;
     left: 28px;
@@ -357,11 +359,11 @@ rect {
 }
 
 /*图片加边框*/
-.b3-typography .img>span:nth-child(2), .protyle-wysiwyg .img>span:nth-child(2):not(.emoji){
-    border: 1px solid var(--line-border-card);
-    /*border-*/
-    border-radius: 5px;
-}
+/*.b3-typography .img>span:nth-child(2), .protyle-wysiwyg .img>span:nth-child(2):not(.emoji){*/
+/*    border: 1px solid var(--line-border-card);*/
+/*    !*border-*!*/
+/*    border-radius: 5px;*/
+/*}*/
 
 /* 列表颜色*/
 .protyle-wysiwyg [data-node-id] .li > .protyle-action {
