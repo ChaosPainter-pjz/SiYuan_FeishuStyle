@@ -1,6 +1,9 @@
 [English](https://github.com/ChaosPainter-pjz/SiYuan_FeishuStyle/blob/main/README.md)
 
-这是一个手动模仿飞书文档风格而制作出来的深色主题。
+这是一个手动模仿飞书文档风格而制作的主题，同时支持明亮和深色模式。
+
+![预览-深色主题](./preview.png)
+![预览-明亮主题](./preview-l.png)
 
 飞书风格是一个办公味比较浓重的风格，相较于原版 `midnight`来说没有那么活泼。更注重沉稳、清晰。当然，相较于`Notion`和`VS Code`来说，咱们飞书的风格还是很年轻的。
 
