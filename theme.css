@@ -180,86 +180,187 @@
 }
 
 :root[data-theme-mode="light"] {
-    /* 飞书浅色模式 */
+    /* 主色 — 飞书品牌蓝 B600 */
+    --b3-theme-primary: #1456f0;
+    --b3-theme-primary-light: rgba(20, 86, 240, 0.65);
+    --b3-theme-primary-lighter: rgba(20, 86, 240, 0.48);
+    --b3-theme-primary-lightest: rgba(20, 86, 240, 0.24);
+    --b3-theme-secondary: #f3a92f;
     --b3-theme-background: #ffffff;
-    --b3-theme-background-light: rgba(31, 35, 41, .08);
+    --b3-theme-background-light: rgba(31, 35, 41, 0.08);
     --b3-theme-surface: #f5f6f7;
-    --b3-theme-surface-light: rgba(245, 246, 247, .86);
+    --b3-theme-surface-light: rgba(31, 35, 41, 0.04);
     --b3-theme-surface-lighter: #dee0e3;
+    --b3-theme-error: #f54a45;
+    --b3-theme-success: #32a645;
 
-    /* 文字颜色 */
+    /* 文字颜色 — 飞书灰阶 */
     --b3-theme-on-primary: #ffffff;
+    --b3-theme-on-secondary: #ffffff;
     --b3-theme-on-background: #1f2329;
     --b3-theme-on-surface: #646a73;
     --b3-theme-on-surface-light: #8f959e;
-    --b3-theme-on-list: #3370ff;
+    --b3-theme-on-error: #ffffff;
+    --b3-theme-on-list: #1456f0;
 
-    /* 工具栏、边框和列表 */
+    /* 字体 */
+    --b3-font-size: 14px;
+
+    /* 顶部工具栏 */
     --b3-toolbar-background: var(--b3-theme-surface);
-    --b3-toolbar-blur-background: rgba(245, 246, 247, .86);
+    --b3-toolbar-blur-background: var(--b3-border-color);
     --b3-toolbar-color: var(--b3-theme-on-surface);
-    --b3-toolbar-hover: rgba(31, 35, 41, .08);
-    --b3-border-color: #dee0e3;
-    --b3-scroll-color: rgba(31, 35, 41, .2);
-    --b3-list-hover: rgba(31, 35, 41, .08);
-    --b3-list-icon-hover: rgba(31, 35, 41, .12);
-    --b3-menu-background: #ffffff;
+    --b3-toolbar-hover: rgba(31, 35, 41, 0.05);
+    --b3-toolbar-left-mac: 69px;
 
-    /* 提示和遮罩 */
+    /* 线条 — Border 2 = N300 */
+    --b3-border-color: #dee0e3;
+    --b3-border-radius-code: 5px;
+    --b3-border-radius: 7px;
+    --b3-border-radius-b: 12px;
+
+    /* 滚动条 */
+    --b3-scroll-color: rgba(31, 35, 41, 0.15);
+
+    /* 列表 hover — N900 5%/8% */
+    --b3-list-hover: rgba(31, 35, 41, 0.05);
+    --b3-list-icon-hover: rgba(31, 35, 41, 0.08);
+
+    /* 菜单 */
+    --b3-menu-background: var(--b3-theme-background);
+
+    /* 提示 */
     --b3-tooltips-background: #1f2329;
     --b3-tooltips-color: #ffffff;
-    --b3-tooltips-second-color: #bbbfc4;
-    --b3-tooltips-shadow: 0 2px 8px rgba(31, 35, 41, .16);
-    --b3-mask-background: rgba(31, 35, 41, .32);
+    --b3-tooltips-second-color: #8f959e;
+    --b3-tooltips-shadow: 0 2px 8px rgba(31, 35, 41, 0.12);
 
-    /* 卡片背景 */
-    --b3-card-error-color: #a8071a;
-    --b3-card-error-background: #fff1f0;
-    --b3-card-warning-color: #ad6800;
-    --b3-card-warning-background: #fff7e6;
-    --b3-card-info-color: #245bdb;
-    --b3-card-info-background: #e8f3ff;
-    --b3-card-success-color: #237804;
-    --b3-card-success-background: #f0ffe6;
+    /* 为空提示 */
+    --b3-empty-color: var(--b3-theme-on-surface);
+
+    /* 遮罩 — bg-mask */
+    --b3-mask-background: rgba(0, 0, 0, 0.55);
+
+    /* 卡片背景 — 飞书功能色 Solid 01 + Content */
+    --b3-card-error-color: #f54a45;
+    --b3-card-error-background: #fef0f0;
+    --b3-card-warning-color: #ed6d0c;
+    --b3-card-warning-background: #fff3e5;
+    --b3-card-info-color: #1456f0;
+    --b3-card-info-background: #f0f4ff;
+    --b3-card-success-color: #32a645;
+    --b3-card-success-background: #e4fae1;
+
+    /* 自定义文字颜色 */
+    --b3-font-color1: var(--b3-card-error-color);
+    --b3-font-color2: var(--b3-card-warning-color);
+    --b3-font-color3: var(--b3-card-info-color);
+    --b3-font-color4: var(--b3-card-success-color);
+    --b3-font-color5: var(--b3-theme-on-surface);
+    --b3-font-color6: var(--b3-theme-primary);
+    --b3-font-color7: var(--b3-theme-secondary);
+    --b3-font-color8: var(--b3-theme-error);
+    --b3-font-color9: #b82879;
+    --b3-font-color10: #872787;
+    --b3-font-color11: #32a645;
+    --b3-font-color12: #ed6d0c;
+    --b3-font-color13: var(--b3-theme-background);
 
     /* 自定义文字背景 */
-    --b3-font-background5: #e5e6e8;
-    --b3-font-background6: #cce0ff;
-    --b3-font-background7: #ffe3b8;
-    --b3-font-background8: #ffc9c2;
-    --b3-font-background9: #ffd1e8;
-    --b3-font-background10: #e7d2ff;
-    --b3-font-background11: #c9f0c1;
-    --b3-font-background12: #fff3a3;
+    --b3-font-background1: var(--b3-card-error-background);
+    --b3-font-background1-light: #f89e9b;
+    --b3-font-background2: var(--b3-card-warning-background);
+    --b3-font-background3: var(--b3-card-info-background);
+    --b3-font-background4: var(--b3-card-success-background);
+    --b3-font-background5: #e3edf5;
+    --b3-font-background6: #c2d4ff;
+    --b3-font-background7: #fef1ce;
+    --b3-font-background8: #fee3e2;
+    --b3-font-background9: #fee2f2;
+    --b3-font-background10: #f3c4f3;
+    --b3-font-background11: #d0f5ce;
+    --b3-font-background12: #fee7cd;
+    --b3-font-background13: var(--b3-theme-on-background);
 
-    /* 下拉菜单和开关 */
-    --b3-select-background: url("data:image/svg+xml;utf8,<svg fill='rgba(100, 106, 115, .75)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 2px center var(--b3-menu-background);
-    --b3-switch-background: #dee0e3;
-    --b3-switch-border: #8f959e;
-    --b3-switch-hover: rgba(31, 35, 41, .06);
+    /* 高亮 */
+    --b3-highlight-color: #1f2329;
+    --b3-highlight-background: #fff258;
+    --b3-highlight-current-background: #ff9d4c;
+
+    /* 下拉菜单 */
+    --b3-select-background: url("data:image/svg+xml;utf8,<svg fill='rgba(31, 35, 41, 0.68)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 2px center var(--b3-theme-background);
+
+    /* switch — Border 1 + B600 */
+    --b3-switch-background: #d0d3d6;
+    --b3-switch-border: var(--b3-theme-on-surface-light);
+    --b3-switch-hover: rgba(31, 35, 41, 0.08);
     --b3-switch-checked: #ffffff;
-    --b3-switch-checked-background: var(--b3-theme-primary);
-    --b3-switch-checked-hover2: rgba(31, 35, 41, .06);
+    --b3-switch-checked-background: #1456f0;
+    --b3-switch-checked-hover: var(--b3-theme-primary);
+    --b3-switch-checked-hover2: rgba(31, 35, 41, 0.08);
 
-    /* 阴影 */
-    --b3-point-shadow: 0 0 1px rgba(31, 35, 41, .12), 0 2px 6px rgba(31, 35, 41, .12);
-    --b3-dialog-shadow: 0 8px 24px rgba(31, 35, 41, .18);
+    /* 阴影 — shadow-default + 透明度 */
+    --b3-point-shadow: inset 0 .5px .5px .5px rgba(31, 35, 41, 0.02), 0 1px 2px rgba(31, 35, 41, 0.04), 0 0 0 0 transparent;
+    --b3-dialog-shadow: 0 8px 24px rgba(31, 35, 41, 0.08);
+    --b3-button-shadow: 0 5px 5px -3px rgba(31, 35, 41, 0.08), 0 8px 10px 1px rgba(31, 35, 41, 0.06), 0 3px 14px 2px rgba(31, 35, 41, 0.04);
 
-    /* 图表和编辑器搜索 */
+    /* 图表颜色 */
+    --b3-graph-p-point: #076f7e;
+    --b3-graph-heading-point: hsl(254, 80%, 74.8%);
+    --b3-graph-math-point: #32a645;
+    --b3-graph-code-point: #1995ca;
+    --b3-graph-table-point: #336df4;
+    --b3-graph-list-point: #cc005e;
+    --b3-graph-todo-point: #cc9900;
+    --b3-graph-olist-point: #b3005f;
+    --b3-graph-listitem-point: #ed6d0c;
+    --b3-graph-bq-point: #8d48e3;
+    --b3-graph-super-point: #b300b3;
     --b3-graph-doc-point: #1f2329;
-    --b3-graph-line: rgba(31, 35, 41, .6);
-    --b3-protyle-search-background: #d9f7be;
-    --b3-protyle-search-border-color: #95de64;
-    --b3-protyle-search-current-background: #bae7ff;
+    --b3-graph-tag-point: #8b9c00;
+    --b3-graph-asset-point: #05c091;
+    --b3-graph-line: #8f959e;
+    --b3-graph-ref-line: #e22e28;
+    --b3-graph-tag-line: #5f6b06;
+    --b3-graph-tag-tag-line: #8b9c00;
+    --b3-graph-asset-line: #037457;
+    --b3-graph-hl-point: #f3a92f;
+    --b3-graph-hl-line: #1456f0;
 
-    /* 编辑器内容 */
+    /* 编辑器搜索 */
+    --b3-protyle-search-background: #d0f5ce;
+    --b3-protyle-search-border-color: #95e599;
+    --b3-protyle-search-current-background: #c2d4ff;
+
+    /* 代码背景 */
     --b3-protyle-code-background: #f5f6f7;
-    --bg-body-overlay: #f2f3f5;
+    --bg-body-overlay: #eff0f1;
     --line-border-card: #dee0e3;
-    --N800: #1f2329;
-    --b3-protyle-inline-mark-background: #fff1b8;
-    --b3-protyle-inline-mark-color: #1f2329;
-    --b3-protyle-inline-tag-color: #646a73;
+    --N800: #2b2f36;
+
+    /* 所见即所得行内元素 */
+    --b3-protyle-inline-strong-color: inherit;
+    --b3-protyle-inline-em-color: inherit;
+    --b3-protyle-inline-u-color: inherit;
+    --b3-protyle-inline-s-color: inherit;
+    --b3-protyle-inline-link-color: #1456f0;
+    --b3-protyle-inline-mark-background: rgba(255, 242, 88, 0.4);
+    --b3-protyle-inline-mark-color: var(--b3-theme-on-background);
+    --b3-protyle-inline-tag-color: #8f959e;
+    --b3-protyle-inline-blockref-color: #872787;
+    --b3-protyle-inline-fileref-color: var(--b3-theme-secondary);
+
+    /* 表格 */
+    --b3-table-even-background: transparent;
+
+    /* 嵌入块 */
+    --b3-embed-background: transparent;
+
+    /* 引述块 */
+    --b3-bq-background: transparent;
+
+    /* 父块 */
+    --b3-parent-background: var(--b3-theme-background);
 }
 
 :lang(ja_JP):root {
